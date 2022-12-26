@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.alternative-divider:before,
+.alternative-divider:after {
+  background-color: rgba(156, 163, 175, 1);
+  content: '';
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.alternative-divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.alternative-divider:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+@layer utilities {
+  .alternative-divider {
+    @apply overflow-hidden text-center text-sm text-gray-400;
+  }
+}
